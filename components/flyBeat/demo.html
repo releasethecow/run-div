@@ -1,0 +1,35 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>打飞机</title>
+		<style>
+			#gamePanel{width:400px;height:500px;background:Black;position:absolute;left:100px;top:100px;}
+			#gamePanel .score{font-size:12px;color:White;position:absolute;left:0;top:0;z-index:9999;}
+			#gamePanel .bullet{width:5px;height:15px;position:absolute;background:url(img/bullet.png);overflow:hidden;
+			_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/bullet.png");}
+			#gamePanel .flyer{width:18px;height:18px;position:absolute;background:url(img/flyer.png);
+			_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/flyer.png");}
+			#gamePanel .enemy{width:18px;height:18px;position:absolute;background:url(img/enemy.png);
+			_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/enemy.png");}
+			#gamePanel .bingo{width:18px;height:18px;position:absolute;background:url(img/bingo.png);
+			_background:none;_filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src="img/bingo.png");}
+			#startBtn{border-width:20px;border-style:solid;border-color:Black Black Black Green;
+			position:absolute;left:190px;top:240px;cursor:pointer;width:0px;height:0px;overflow:hidden;}
+			
+		</style>
+	</head>
+	
+	<body>
+		
+		<div id="gamePanel" tabindex="0">
+			<div class="score">分数：<span id="score">0</span></div>
+			<div id="startBtn" onclick="Start()"></div>
+		</div>
+		
+		<script type="text/javascript" src="js/flyer.js"></script>
+		<script type="text/javascript" src="js/enemy.js"></script>
+		<script type="text/javascript" src="js/bullet.js"></script>
+		<script type="text/javascript" src="js/game.js"></script>
+	</body>
+</html>
